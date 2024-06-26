@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;   
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    background: #db0001;
+    padding: 7px 20px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.language-btn{
+    align-items: center;   
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px; 
+}
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.header-container h1{
+    font-size: 70px;
+}
+.header-container h3{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.header-container p{
+    font-style: 18px;
+    margin-bottom: 10px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.input input{
+    flex-basis: 75%;
+    padding: 20px 30px;
+}
+.input button{
+    flex-basis: 25%;
+    background: red;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+.text-col h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-style: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: "+";
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    transition: transform .5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .input{
+    margin-top: 20px;
+}
+
+hr{
+    border: 2px solid rgb(243, 226, 226);
+    margin: 50px 30px;
+}
+.last{
+    padding: 2% 20%;
+}
+.last-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.last-content .first p{
+    margin-bottom: 15px;
+}
+.last-btn{
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 10px;
+}
+.last-btn img{
+    width: 10px;
+}
+
+@media (max-width:768px){
+    nav .logo{
+        width: 80px;
+    }
+    nav button, .language-btn{
+        padding: 4px 14px;
+    }
+     .header-container h1{
+        font-size: 50px;
+    }
+    .header-container h3{
+        font-size: 25px;
+    }
+    .input button{
+        font-size: 12px;
+        padding: 21px 2px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction: column;
+    }
+    .row:nth-child(1), .row:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .text-col h2{
+        font-style: 30px;
+    }
+    .text-col p{
+        font-size: 18px;
+    }
+    
+}
